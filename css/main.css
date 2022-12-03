@@ -1,0 +1,17 @@
+* {
+    --width: 50%;
+}
+
+nav {
+    display: flex;
+    
+}
+.btns {
+    background: lightblue;
+    font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid darkblue;
+    width: var(--width);
+}
