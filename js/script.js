@@ -51,3 +51,25 @@ getFile("./csv/buttons.csv",
                 })
             })
         })
+
+document.querySelector("input[name='wejscie']").oninput = (e) => {
+    let reg = /^[a-z0-9\\._\-]{3,}\@([a-z0-9\-_]+\.)+[a-z]{2,10}$/gi
+    if (e.target.value.match(reg)) {
+        const m = document.querySelector('#mails')
+        const item = document.createElement('li')
+        const button = document.createElement('button')
+        const span = document.createElement('span')
+        span.innerText = e.target.value.match(reg)
+        item.appendChild(span)
+        button.innerText = "Usuń"
+        button.onclick = (e) => {
+            m.removeChild(e.target.parentNode)
+            //e.target.parentNode.parentNode.removeChild(e.target.parentNode)
+            //console.log(e)
+        }
+        item.appendChild(button)
+        m.appendChild(item)
+    }
+
+    //console.log(e.target.value.match(reg))
+}
