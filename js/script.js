@@ -70,6 +70,4 @@ document.querySelector("input[name='wejscie']").oninput = (e) => {
         item.appendChild(button)
         m.appendChild(item)
     }
-
-    //console.log(e.target.value.match(reg))
 }
